@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React  from 'react'
 
 export default function Alert(props) {
     // const [alert, setName] = useState({ firstName: "Bharat", lastName: "" })

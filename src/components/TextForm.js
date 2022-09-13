@@ -31,18 +31,18 @@ export default function TextForm(props) {
         let text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
-        props.showAlert("Text copied to clipboard", "Success");
+        props.showAlert("Text copied to clipboard ", "Success");
 
     }
     const handleRemoveExtraSpace = (event) => {
          
     }
     return (
-      <>
-            <div style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
-          <h1> {props.heading}</h1>
+      <>  
+          <div style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
+                <h1> {props.heading} , {props.mode}</h1>
           <div className="form-group">
-                    <textarea mb-3 className="form-control" style={{ backgroundColor: props.mode === 'light' ? 'white' : '#0f1743' , color: props.mode === 'dark' ? 'white' : 'black'} } id="myBox" value={text} placeholder='Hello, How are you ?'  onChange = {handleOnChange} rows="5"></textarea>
+            <textarea mb-3 className="form-control" style={{ backgroundColor: props.mode === 'dark' ? '#0f1743' :'white' , color: props.mode === 'dark' ? 'white' : 'black'} } id="myBox" value={text} placeholder='Hello, How are you ?'  onChange = {handleOnChange} rows="5"></textarea>
           </div>
             <button className="btn btn-primary " onClick={handleUpClick}>Convert To UpperCase</button>
             <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert To LowerCase</button>
