@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import TextForms from './components/TextForm';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
-
+ 
 function App() {
   const [mode, setMode] = useState('light');
   const [btnText, setBtnText] = useState('Enable Dark Mode');
@@ -40,12 +40,15 @@ function App() {
   return (
     <> 
       {/* onLoad();   */}
+      {/* <Router> */}
+
       <Navbar tittle="TextUtil" mode = {mode} toggleMode = {toggleMode} btnText = {btnText} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForms showAlert = {showAlert} heading="Enter Your name" mode = {mode} />
+        <TextForms showAlert = {showAlert} heading="Welcome To TextUtils" mode = {mode} />
         {/* <About/> */}
       </div>
+      {/* </Router> */}
     </>
   );
 }
